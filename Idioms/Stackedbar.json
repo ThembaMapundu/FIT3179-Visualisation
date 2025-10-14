@@ -1,0 +1,110 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": "Energy Production by in Australia from 2008 to 2023",
+  "width": 700,
+  "height": 500,
+  "data": {
+    "url": "https://raw.githubusercontent.com/ThembaMapundu/FIT3179-Visualisation/refs/heads/main/Data/Energy_production_data.csv"
+  },
+  "transform": [
+    {
+      "fold": [
+        "BLACK COAL", "BROWN COAL", "NATURAL GAS", "OIL PRODUCTS", 
+        "BAGASSE, WOOD ", "BIOGAS", "WIND", "HYDRO", 
+        "LARGE SCALE SOLAR PV", "SMALL SCALE SOLAR PV", "GEOTHERMAL"
+      ],
+      "as": ["Energy_Source", "Energy_Value"]
+    },
+    {
+      "calculate": "trim(datum.STATE)",
+      "as": "TrimmedState"
+    },
+    {
+      "filter": {"field": "TrimmedState", "equal": {"expr": "state_select"}}
+    }
+  ],
+  "params": [
+    {
+      "name": "state_select",
+      "value": "Overall",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Overall", "New South Wales", "Victoria", "Queensland", "Western Australia",
+          "South Australia", "Tasmania", "Northern Territory"
+        ],
+        "name": "Select State: "
+      }
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "YEAR",
+      "type": "ordinal",
+      "title": "Year",
+      "axis": {"labelAngle": -45}
+    },
+    "y": {
+      "field": "Energy_Value",
+      "type": "quantitative",
+      "title": "Energy Production (GWh)"
+    },
+    "color": {
+      "field": "Energy_Source",
+      "type": "nominal",
+      "title": "Energy Source",
+      "scale": {
+        "domain": [
+          "BLACK COAL", "BROWN COAL", "NATURAL GAS", "OIL PRODUCTS",
+          "BAGASSE, WOOD ", "BIOGAS", "WIND", "HYDRO",
+          "LARGE SCALE SOLAR PV", "SMALL SCALE SOLAR PV", "GEOTHERMAL"
+        ],
+        "range": [
+          "#1f77b4", "#aec7e8", "#ff7f0e", "#ffbb78",
+          "#2ca02c", "#98df8a", "#d62728", "#ff9896",
+          "#9467bd", "#c5b0d5", "#8c564b"
+        ]
+      }
+    },
+    "order": {
+      "field": "Energy_Source",
+      "type": "ordinal",
+      "sort": [
+      "BLACK COAL",
+       "BROWN COAL",
+        "NATURAL GAS", 
+        "OIL PRODUCTS",
+      "BAGASSE, WOOD ", 
+      "BIOGAS", 
+      "WIND", 
+      "HYDRO",
+      "LARGE SCALE SOLAR PV", 
+      "SMALL SCALE SOLAR PV", 
+      "GEOTHERMAL"]
+      }
+    ,"tooltip": [
+      {"field": "YEAR",
+       "type": "ordinal",
+        "title": "Year"},
+      {"field": "STATE",
+       "type": "nominal", 
+       "title": "State"},
+      {"field": "Energy_Source",
+       "type": "nominal", 
+       "title": "Energy Source"},
+      {
+        "field": "Energy_Value",
+        "type": "quantitative",
+        "title": "Energy Production (GWh)",
+        "format": ".1f"
+      }
+    ]
+  },
+  "config": {
+    "legend": {
+      "columns": 1
+    }
+  }
+
+}
