@@ -1,0 +1,39 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Australia Energy Production by State/Territory (GWh)",
+  "width": 700,
+  "height": 600,
+  "projection": {"type": "equalEarth"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/ThembaMapundu/FIT3179-Visualisation/refs/heads/main/Data/Australiamap.json",
+    "format": {"type": "topojson", "feature": "STE_2021_AUST_GDA2020"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.STE_NAME21",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/ThembaMapundu/FIT3179-Visualisation/refs/heads/main/Data/OverallProduction.csv"
+        },
+        "key": "State",
+        "fields": ["Energy"]
+      }
+    }
+  ],
+  "mark": {
+    "type": "geoshape",
+    "stroke": "white"
+  },
+  "encoding": {
+    "color": {
+      "field": "Energy",
+      "type": "quantitative",
+      "title": "Energy Production (GWh)",
+      "scale": {"type": "blues"}
+    },
+    "tooltip": [
+      {"field": "properties.STE_NAME21", "type": "nominal", "title": "State/Territory"},
+      {"field": "Energy", "type": "quantitative", "title": "Energy (GWh)", "format": ","}
+    ]
+  }
+}
