@@ -29,7 +29,12 @@
       "field": "Energy",
       "type": "quantitative",
       "title": "Energy Production (GWh)",
-      "scale": {"type": "blues"}
+      
+      "scale": {
+      "type": "threshold",
+      "domain": [0, 150000, 400000, 700000, 1000000],
+      "range": ["#fff7ec", "#fdd49e", "#fdbb84", "#fc8d59", "#ef6548", "#d7301f"]}
+
     },
     "tooltip": [
       {"field": "properties.STE_NAME21", "type": "nominal", "title": "State/Territory"},
