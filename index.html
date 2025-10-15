@@ -16,6 +16,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="vega_lite_vis.js"></script>
 
+    
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- CSS file -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+
 </head>
 <body>
     <div class = "page">
@@ -75,7 +85,9 @@
         var specVis1 = "./Idioms/EnergyAusChoropleth.json";
         var specVis2 = "./Idioms/Stackedbar.json";
 
-        vegaEmbed('#vis1', specVis1, { "actions": false });
+        vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
 
         vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
