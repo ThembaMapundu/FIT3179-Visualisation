@@ -24,7 +24,6 @@
 
     h1 {
       font-weight: 900;
-
     }
 
     body {
@@ -67,14 +66,11 @@
 </head>
 
 <body>
-
-
-</head>
-<body>
-    <div class = "page">
+    <div class="page">
         
+        <!-- Title and subtitle -->
         <div class="pure-g">
-            <div class = "pure-u-1-1">
+            <div class="pure-u-1-1">
                 <h1>Australian Electrical Energy Production and Usage</h1>
                 <p>This visualisation charts the 16 year shift (2008 - 2023) in Australia's electrical energy, contrasting the steady path of 
                 usage with the transformation in production from non renewable energy sources to renewable energy sources. The data sourced from
@@ -82,28 +78,29 @@
                 power sector's evolution.</p>
             </div>
         </div>
+        <!-- end pure grid group -->
 
-        <! -- Choropleth map showing production -->
+        <!-- Choropleth map showing production -->
         <div class="pure-g">
             <div class="pure-u-1-1">
                 <div id="vis1" class="vis-container"></div>
             </div>
         </div>
-        <!--end pure grid group-->
+        <!-- end pure grid group -->
 
         <!-- Comment -->
         <div class="pure-g">
             <div class="pure-u-1-1">
-                <p>New South Wales and Queensland lead as the nation's powerhoused, each generating a total of over 1,000,000 GWh of energy during
-                the period 2008 - 2023. This is largely driven by there extensive coal fired power stations and significant population bases.
+                <p>New South Wales and Queensland lead as the nation's powerhouses, each generating a total of over 1,000,000 GWh of energy during
+                the period 2008 - 2023. This is largely driven by their extensive coal fired power stations and significant population bases.
                 Victoria follows as a major contributor, while Western Australia's substantial output is closely tied to its energy intensive mining 
-                and recource sector. In contrast, smaller states like South Australia, Tasmanian and the Northern Territory operate on a significantly smaller
-                scale, reflectiong there smaller population and different econoomical profiles.</p>
+                and resource sector. In contrast, smaller states like South Australia, Tasmania and the Northern Territory operate on a significantly smaller
+                scale, reflecting their smaller population and different economical profiles.</p>
             </div>
         </div>
-        <!--end pure grid group-->
+        <!-- end pure grid group -->
 
-        <!--Stacked bar graph -->
+        <!-- Stacked bar graph -->
         <div class="pure-g">
             <div class="pure-u-1-1">
                 <div id="vis2" class="vis-container"></div>
@@ -111,16 +108,23 @@
         </div>
         <!-- end pure grid group -->
 
-        <! -- text -->
+        <!-- Text -->
         <div class="pure-g">
             <div class="pure-u-1-1">
                 <p><small><i> Data is recorded at the end of every financial year </i></small></p>
-                <p>For each state theres a general decrease in production using non renewable energy sources such as coal and this is a result of a shift to
-                renewable energy such as hydro and wind energy. Since the energy produced from renewable is still overally low a s compared to Non renewable energy 
-                sources, the renewable energy data has been grouped. </p>
+                <p>For each state there's a general decrease in production using non renewable energy sources such as coal and this is a result of a shift to
+                renewable energy such as hydro and wind energy. Since the energy produced from renewable is still overall low as compared to Non renewable energy 
+                sources, the renewable energy data has been grouped.</p>
             </div>
         </div>
-        <!--end pure grid group-->
+        <!-- end pure grid group -->
+        
+        <!-- Footer -->
+        <div class="pure-g">
+            <div class="pure-u-1-1 small-font">
+                <p>This visualisation is created by Themba Mapundu. The data is from the Australian Energy Statistics.</p>
+            </div>
+        </div>
         
     </div> <!-- end page -->
 
@@ -135,9 +139,7 @@
         vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
-
     </script>
     
 </body>
 </html>
-
