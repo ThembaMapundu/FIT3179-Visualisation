@@ -3,7 +3,7 @@
   "title": "Australia Energy Production by State/Territory (GWh)",
   "width": "container",
   "height": 600,
-  "projection": {"type": "equalEarth"},
+  "projection": {"type": "mercator"},
   "data": {
     "url": "https://raw.githubusercontent.com/ThembaMapundu/FIT3179-Visualisation/refs/heads/main/Data/Australiamap.json",
     "format": {"type": "topojson", "feature": "STE_2021_AUST_GDA2020"}
