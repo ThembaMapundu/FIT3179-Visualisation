@@ -1,18 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Australian Electrical Energy Production and Usage</title>
+    <!-- Import Vega & Vega-Lite -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    
+    <!-- Import pure.css -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="vega_lite_vis.js"></script>
-    <title>First Vega-Lite graph </title>
+    
 </head>
 <body>
-    <h1>Energy production in Australia</h1>
-    <div id="Stackedbar_chart">
+    <div class = "page">
+        
+        <div class="pure-g">
+            <div class = "pure-u-1-1">
+                <h1>Australian Electrical Energy Production and Usage</h1>
+                <p>This visualisation charts the 16 year shift (2008 - 2023) in Australia's electrical energy, contrasting the steady path of 
+                usage with the transformation in production from non renewable energy sources to renewable energy sources. The data sourced from
+                Australian Energy Statistics, is recorded at the end of each financial year (July - June), providing a consistent timeline of the 
+                power sector's evolution</p>
+            </div>
+        </div>
+
+        <! -- Choropleth map showing production -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <div id="vis1" class="vis-container"></div>
+            </div>
+        </div>
+        <!--end pure grid group-->
+
+        <!-- Comment -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <p>New South Wales and Queensland lead as the nation's powerhoused, each generating a total of over 1,000,000 GWh of energy during
+                the period 2008 - 2023. This is largely driven by there extensive coal fired power stations and significant population bases.
+                Victoria follows as a major contributor, while Western Australia's substantial output is closely tied to its energy intensive mining 
+                and recource sector. In contrast, smaller states like South Australia, Tasmanian and the Northern Territory operate on a significantly smaller
+                scale, reflectiong there smaller population and different econoomical profiles.</p>
+            </div>
+        </div>
+        <!--end pure grid group-->
+
+        <!--Stacked bar graph -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <div id="vis2" class="vis-container"></div>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+
+        <! -- text -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <p><small><i> Data is recorded at the end of every financial year </i></small></p>
+                <p>For each state theres a general decrease in production using non renewable energy sources such as coal and this is a result of a shift to
+                renewable energy such as hydro and wind energy. Since the energy produced from renewable is still overally low a s compared to Non renewable energy 
+                sources, the renewable energy data has been grouped. </p>
+            </div>
+        </div>
+        <!--end pure grid group-->
+        
+    </div> <!-- end page -->
+
+<script type="text/javascript">
+    var specVis1 = "./Idioms/EnergyAusChoropleth.json";
+    var specVis2 = "./Idioms/Stackedbar.json";
+
+    vegaEmbed('#vis1', specVis1, { "actions": false });
+
+    vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+</script>
+    
+        
+        
+
+                
+        
+
+    
+        
+
+
+
+
+
+
+        
+        
+        <div id="Stackedbar_chart">
+        </div>
+        
     </div>
     <script type = "text/javascript">
         var vg_1 = "./Idioms/Stackedbar.json";
@@ -22,5 +111,7 @@
         // (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);  
     </script>
+    
 </body>
 </html>
+
