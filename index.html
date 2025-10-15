@@ -71,45 +71,16 @@
         
     </div> <!-- end page -->
 
-<script type="text/javascript">
-    var specVis1 = "./Idioms/EnergyAusChoropleth.json";
-    var specVis2 = "./Idioms/Stackedbar.json";
+    <script type="text/javascript">
+        var specVis1 = "./Idioms/EnergyAusChoropleth.json";
+        var specVis2 = "./Idioms/Stackedbar.json";
 
-    vegaEmbed('#vis1', specVis1, { "actions": false });
+        vegaEmbed('#vis1', specVis1, { "actions": false });
 
-    vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
+        vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
 
-</script>
-    
-        
-        
-
-                
-        
-
-    
-        
-
-
-
-
-
-
-        
-        
-        <div id="Stackedbar_chart">
-        </div>
-        
-    </div>
-    <script type = "text/javascript">
-        var vg_1 = "./Idioms/Stackedbar.json";
-
-        vegaEmbed("#Stackedbar_chart", vg_1).then(function(result) {
-        // Access the Vega view instance 
-        // (https://vega.github.io/vega/docs/api/view/) as result.view
-        }).catch(console.error);  
     </script>
     
 </body>
