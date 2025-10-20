@@ -72,7 +72,13 @@
   },
   "layer": [
     {"mark": "line"},
-    {"mark": "point"}
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 60 
+      }
+    }
   ],
   "config": {
     "view": {"stroke": null},
