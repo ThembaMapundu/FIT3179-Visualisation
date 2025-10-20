@@ -1,0 +1,81 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ThembaMapundu/FIT3179-Visualisation/refs/heads/main/Data/energy_data_long.csv"
+  },
+  "title": "Renewable vs. Non-Renewable Energy Consumption Over Time by State",
+  "width": 600,
+  "height": 400,
+  "params": [
+    {
+      "name": "state_filter",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Northern Territory",
+          "Tasmania",
+          "South Australia",
+          "Western Australia",
+          "Queensland",
+          "Victoria",
+          "New South Wales"
+        ],
+        "name": "Filter State: "
+      },
+      "value": "New South Wales" 
+    }
+  ],
+  "transform": [
+    {
+      "filter": "datum.State == state_filter"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "title": "Financial Year",
+      "axis": {
+        "labelAngle": -45,
+        "grid": false,
+        "domain": false,
+        "ticks": false 
+      }
+    },
+    "y": {
+      "field": "Energy Value",
+      "type": "quantitative",
+      "title": "Energy Consumption (GWh)",
+      "scale": {"zero": false},
+      "axis": {
+        "grid": false,
+        "domain": false,
+        "ticks": false
+      }
+    },
+    "color": {
+      "field": "Energy Type",
+      "type": "nominal",
+      "title": "Energy Type",
+      "scale":{
+        "domain":["renewable","non renewable"],
+        "range": ["green","brown"]
+      }
+
+    },
+    "tooltip": [
+      {"field": "State", "title": "State"},
+      {"field": "Energy Type", "title": "Type"},
+      {"field": "Year", "title": "Year"},
+      {"field": "Energy Value", "type": "quantitative", "title": "Energy (GWh)", "format": ".1f"}
+    ]
+  },
+  "layer": [
+    {"mark": "line"},
+    {"mark": "point"}
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "title": { "fontSize": 16, "fontWeight": 600}
+  }
+}
