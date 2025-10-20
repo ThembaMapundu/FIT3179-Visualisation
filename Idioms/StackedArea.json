@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 600,
+  "height": 400,
+  "title": "Australian Renewable Electricity Generation by Fuel",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ThembaMapundu/FIT3179-Visualisation/refs/heads/main/Data/renewable_energy_consumption.csv"
+  },
+  "transform": [
+    {"filter": "datum['Energy Source'] != null && datum['Energy Source'] !== ''"}
+  ],
+  "mark": {
+    "type": "area",
+    "tooltip": true
+  },
+  "encoding": {
+    "x": {
+      "field": "Year Start",
+      "type": "temporal",
+      "axis": {"title": "Year", "format": "%Y", "grid": false, "domain": false, "ticks": false}
+    },
+    "y": {
+      "field": "Consumption",
+      "type": "quantitative",
+      "aggregate": "sum",
+      "axis": {"title": "Electricity Generation (GWh)", "grid": false, "domain": false, "ticks": false}
+    },
+    "color": {
+      "field": "Energy Source",
+      "type": "nominal",
+      "scale": {"scheme": "greens"},
+      "title": "Energy Source"
+    },
+    "tooltip": [
+      {"field": "Year Start", "type": "temporal", "title": "Year", "format": "%Y"},
+      {"field": "Energy Source", "type": "nominal", "title": "Energy Source"},
+      {"field": "Consumption", "type": "quantitative", "title": "Electricity Generation (GWh)", "format": ".1f"}
+    ]
+  },
+  "config": {
+    "view": {"stroke": "transparent"}
+  }
+}
