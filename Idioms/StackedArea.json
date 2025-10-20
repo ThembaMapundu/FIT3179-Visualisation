@@ -28,7 +28,10 @@
     "color": {
       "field": "Energy Source",
       "type": "nominal",
-      "scale": {"scheme": "greens"},
+      "scale": {
+        "domain": ["Hydro", "Wind", "Solar", "Bioenergy"],
+        "range": ["#1f77b4", "#2ca02c", "#ffdd33", "#8c564b"]
+      },
       "title": "Energy Source"
     },
     "tooltip": [
