@@ -1,0 +1,211 @@
+State,Energy Type,Year,Energy Value
+Northern Territory,non renewable,2008-09,2912.7
+Northern Territory,renewable,2008-09,9.7
+Tasmania,non renewable,2008-09,769.8
+Tasmania,renewable,2008-09,7827.397
+South Australia,non renewable,2008-09,12322.0
+South Australia,renewable,2008-09,2133.8
+Western Australia,non renewable,2008-09,24758.5
+Western Australia,renewable,2008-09,813.4
+Queensland,non renewable,2008-09,60850.8
+Queensland,renewable,2008-09,2487.3
+Victoria,non renewable,2008-09,53566.3
+Victoria,renewable,2008-09,3123.623
+New South Wales,non renewable,2008-09,70120.1
+New South Wales,renewable,2008-09,2249.277
+Northern Territory,non renewable,2009-10,3253.1
+Northern Territory,renewable,2009-10,13.5
+Tasmania,non renewable,2009-10,1183.7
+Tasmania,renewable,2009-10,8831.1
+South Australia,non renewable,2009-10,11627.5
+South Australia,renewable,2009-10,2169.4
+Western Australia,non renewable,2009-10,26991.9
+Western Australia,renewable,2009-10,842.7
+Queensland,non renewable,2009-10,62105.0
+Queensland,renewable,2009-10,2273.509
+Victoria,non renewable,2009-10,53240.7
+Victoria,renewable,2009-10,3750.574
+New South Wales,non renewable,2009-10,69085.5
+New South Wales,renewable,2009-10,3922.326
+Northern Territory,non renewable,2010-11,3076.6
+Northern Territory,renewable,2010-11,14.3
+Tasmania,non renewable,2010-11,1600.9
+Tasmania,renewable,2010-11,9976.5
+South Australia,non renewable,2010-11,11014.0
+South Australia,renewable,2010-11,3155.0
+Western Australia,non renewable,2010-11,29881.8
+Western Australia,renewable,2010-11,1029.1
+Queensland,non renewable,2010-11,60833.3
+Queensland,renewable,2010-11,2314.7
+Victoria,non renewable,2010-11,52394.5
+Victoria,renewable,2010-11,5890.122
+New South Wales,non renewable,2010-11,65536.3
+New South Wales,renewable,2010-11,4144.569
+Northern Territory,non renewable,2011-12,3130.2
+Northern Territory,renewable,2011-12,17.4
+Tasmania,non renewable,2011-12,1623.2
+Tasmania,renewable,2011-12,8994.6
+South Australia,non renewable,2011-12,9809.0
+South Australia,renewable,2011-12,3599.628
+Western Australia,non renewable,2011-12,29492.8
+Western Australia,renewable,2011-12,1735.8
+Queensland,non renewable,2011-12,61026.7
+Queensland,renewable,2011-12,2636.5
+Victoria,non renewable,2011-12,53206.2
+Victoria,renewable,2011-12,5047.522
+New South Wales,non renewable,2011-12,64707.9
+New South Wales,renewable,2011-12,4624.525
+Northern Territory,non renewable,2012-13,3291.0
+Northern Territory,renewable,2012-13,23.4
+Tasmania,non renewable,2012-13,1764.6
+Tasmania,renewable,2012-13,11330.2
+South Australia,non renewable,2012-13,9439.4
+South Australia,renewable,2012-13,3950.6
+Western Australia,non renewable,2012-13,29967.0
+Western Australia,renewable,2012-13,2079.3
+Queensland,non renewable,2012-13,59367.7
+Queensland,renewable,2012-13,3264.7
+Victoria,non renewable,2012-13,48576.0
+Victoria,renewable,2012-13,6724.111
+New South Wales,non renewable,2012-13,62158.2
+New South Wales,renewable,2012-13,5827.089
+Northern Territory,non renewable,2013-14,3432.5
+Northern Territory,renewable,2013-14,33.315
+Tasmania,non renewable,2013-14,1004.7
+Tasmania,renewable,2013-14,12994.756
+South Australia,non renewable,2013-14,8203.5
+South Australia,renewable,2013-14,4916.465
+Western Australia,non renewable,2013-14,34251.4
+Western Australia,renewable,2013-14,2428.186
+Queensland,non renewable,2013-14,56674.5
+Queensland,renewable,2013-14,3805.465
+Victoria,non renewable,2013-14,47362.8
+Victoria,renewable,2013-14,6932.353
+New South Wales,non renewable,2013-14,61518.495
+New South Wales,renewable,2013-14,5478.144
+Northern Territory,non renewable,2014-15,2952.7
+Northern Territory,renewable,2014-15,44.304
+Tasmania,non renewable,2014-15,149.942
+Tasmania,renewable,2014-15,9480.946
+South Australia,non renewable,2014-15,7834.749
+South Australia,renewable,2014-15,5191.562
+Western Australia,non renewable,2014-15,35159.704
+Western Australia,renewable,2014-15,2622.214
+Queensland,non renewable,2014-15,63999.5
+Queensland,renewable,2014-15,4117.542
+Victoria,non renewable,2014-15,50883.677
+Victoria,renewable,2014-15,7137.534
+New South Wales,non renewable,2014-15,57374.89
+New South Wales,renewable,2014-15,5441.551
+Northern Territory,non renewable,2015-16,3007.344
+Northern Territory,renewable,2015-16,58.651
+Tasmania,non renewable,2015-16,948.282
+Tasmania,renewable,2015-16,9396.045
+South Australia,non renewable,2015-16,7685.867
+South Australia,renewable,2015-16,5396.549
+Western Australia,non renewable,2015-16,36159.649
+Western Australia,renewable,2015-16,2577.151
+Queensland,non renewable,2015-16,63031.85
+Queensland,renewable,2015-16,4355.282
+Victoria,non renewable,2015-16,48196.949
+Victoria,renewable,2015-16,8385.587
+New South Wales,non renewable,2015-16,60252.593
+New South Wales,renewable,2015-16,7976.784
+Northern Territory,non renewable,2016-17,2903.895
+Northern Territory,renewable,2016-17,87.331
+Tasmania,non renewable,2016-17,919.37
+Tasmania,renewable,2016-17,9683.9
+South Australia,non renewable,2016-17,6211.32
+South Australia,renewable,2016-17,5499.925
+Western Australia,non renewable,2016-17,37051.041
+Western Australia,renewable,2016-17,2987.911
+Queensland,non renewable,2016-17,64495.152
+Queensland,renewable,2016-17,4481.666
+Victoria,non renewable,2016-17,46362.117
+Victoria,renewable,2016-17,9174.092
+New South Wales,non renewable,2016-17,59619.497
+New South Wales,renewable,2016-17,8539.75
+Northern Territory,non renewable,2017-18,3384.935
+Northern Territory,renewable,2017-18,124.884
+Tasmania,non renewable,2017-18,1004.673
+Tasmania,renewable,2017-18,10740.248
+South Australia,non renewable,2017-18,7886.034
+South Australia,renewable,2017-18,6937.615
+Western Australia,non renewable,2017-18,37987.48
+Western Australia,renewable,2017-18,3190.915
+Queensland,non renewable,2017-18,65728.454
+Queensland,renewable,2017-18,4988.108
+Victoria,non renewable,2017-18,40029.336
+Victoria,renewable,2017-18,9328.798
+New South Wales,non renewable,2017-18,60392.35
+New South Wales,renewable,2017-18,9332.271
+Northern Territory,non renewable,2018-19,4298.205
+Northern Territory,renewable,2018-19,159.319
+Tasmania,non renewable,2018-19,639.056
+Tasmania,renewable,2018-19,11158.569
+South Australia,non renewable,2018-19,7408.831
+South Australia,renewable,2018-19,7528.675
+Western Australia,non renewable,2018-19,38150.129
+Western Australia,renewable,2018-19,3760.71
+Queensland,non renewable,2018-19,63055.128
+Queensland,renewable,2018-19,7611.352
+Victoria,non renewable,2018-19,38033.936
+Victoria,renewable,2018-19,10662.034
+New South Wales,non renewable,2018-19,60417.819
+New South Wales,renewable,2018-19,11142.976
+Northern Territory,non renewable,2019-20,4789.404
+Northern Territory,renewable,2019-20,210.183
+Tasmania,non renewable,2019-20,217.312
+Tasmania,renewable,2019-20,11461.179
+South Australia,non renewable,2019-20,6773.406
+South Australia,renewable,2019-20,8266.039
+Western Australia,non renewable,2019-20,38945.516
+Western Australia,renewable,2019-20,4450.522
+Queensland,non renewable,2019-20,60766.749
+Queensland,renewable,2019-20,10236.245
+Victoria,non renewable,2019-20,36980.565
+Victoria,renewable,2019-20,12016.336
+New South Wales,non renewable,2019-20,56774.898
+New South Wales,renewable,2019-20,13289.838
+Northern Territory,non renewable,2020-21,4645.465
+Northern Territory,renewable,2020-21,256.144
+Tasmania,non renewable,2020-21,205.966
+Tasmania,renewable,2020-21,10370.566
+South Australia,non renewable,2020-21,5715.687
+South Australia,renewable,2020-21,8977.631
+Western Australia,non renewable,2020-21,37351.004
+Western Australia,renewable,2020-21,6164.277
+Queensland,non renewable,2020-21,57607.528
+Queensland,renewable,2020-21,12607.874
+Victoria,non renewable,2020-21,36196.013
+Victoria,renewable,2020-21,15293.467
+New South Wales,non renewable,2020-21,53034.595
+New South Wales,renewable,2020-21,17128.232
+Northern Territory,non renewable,2021-22,5023.411
+Northern Territory,renewable,2021-22,282.994
+Tasmania,non renewable,2021-22,185.438
+Tasmania,renewable,2021-22,11790.255
+South Australia,non renewable,2021-22,4506.864
+South Australia,renewable,2021-22,9953.499
+Western Australia,non renewable,2021-22,37168.239
+Western Australia,renewable,2021-22,7381.045
+Queensland,non renewable,2021-22,55064.589
+Queensland,renewable,2021-22,14168.523
+Victoria,non renewable,2021-22,34959.893
+Victoria,renewable,2021-22,18947.673
+New South Wales,non renewable,2021-22,50627.581
+New South Wales,renewable,2021-22,21471.577
+Northern Territory,non renewable,2022-23,4687.446
+Northern Territory,renewable,2022-23,319.194
+Tasmania,non renewable,2022-23,206.236
+Tasmania,renewable,2022-23,10498.456
+South Australia,non renewable,2022-23,4146.455
+South Australia,renewable,2022-23,11362.41
+Western Australia,non renewable,2022-23,36841.251
+Western Australia,renewable,2022-23,7636.963
+Queensland,non renewable,2022-23,53579.665
+Queensland,renewable,2022-23,17159.297
+Victoria,non renewable,2022-23,33411.677
+Victoria,renewable,2022-23,21556.086
+New South Wales,non renewable,2022-23,48489.888
+New South Wales,renewable,2022-23,24579.818
