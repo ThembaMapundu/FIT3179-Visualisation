@@ -4,8 +4,8 @@
     "url": "https://raw.githubusercontent.com/ThembaMapundu/FIT3179-Visualisation/refs/heads/main/Data/energy_data_long.csv"
   },
   "title": "Renewable vs. Non-Renewable Energy Consumption Over Time by State",
-  "width": 600,
-  "height": 400,
+  "width": "container",
+  "height": 250,
   "params": [
     {
       "name": "state_filter",
