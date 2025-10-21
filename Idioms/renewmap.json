@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Energy Production in Australia (2008–2023)",
+  "title": "Renewable and Non-Renewable Energy Production (2008-2023) ",
   "width": "container",
   "height": 250,
   "data": {
