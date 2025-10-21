@@ -30,7 +30,7 @@
       "type": "nominal",
       "scale": {
         "domain": ["Hydro", "Wind", "Solar", "Bioenergy"],
-        "range": ["#1f77b4", "#2ca02c", "#ffdd33", "#8c564b"]
+        "range": ["#1f77b4", "#FF69B4", "#ffdd33", "purple"]
       },
       "title": "Energy Source",
       "legend": {
