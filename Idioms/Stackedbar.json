@@ -6,6 +6,11 @@
   "data": {
     "url": "https://raw.githubusercontent.com/ThembaMapundu/FIT3179-Visualisation/refs/heads/main/Data/Energy_production_data.csv"
   },
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
   "transform": [
     {
       "fold": [
@@ -50,12 +55,27 @@
   ],
   "mark": "bar",
   "encoding": {
-    "x": {"field": "YEAR", "type": "ordinal", "title": "Year", "axis": {"labelAngle": -45}},
+    "x": {
+      "field": "YEAR", 
+      "type": "ordinal", 
+      "title": "Year", 
+      "axis": {
+        "labelAngle": -45,
+        "grid": false,
+        "domain": false,
+        "ticks": false
+      }
+    },
     "y": {
       "aggregate": "sum",
       "field": "Energy_Value",
       "type": "quantitative",
-      "title": "Energy Production (GWh)"
+      "title": "Energy Production (GWh)",
+      "axis": {
+        "grid": false,
+        "domain": false,
+        "ticks": false
+      }
     },
     "color": {
       "field": "Grouped_Energy_Source",
