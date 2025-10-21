@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Energy Production in Australia by fuel",
+  "title": "Energy Production in Australia by Fuel",
   "width": "container",
   "height": 450,
   "data": {
