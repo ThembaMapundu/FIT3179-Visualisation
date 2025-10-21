@@ -1,7 +1,7 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "title": "Energy Production by in Australia from 2008 to 2023",
-  "width": "container",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Energy Production in Australia (2008–2023)",
+  "width": 700,
   "height": 500,
   "data": {
     "url": "https://raw.githubusercontent.com/ThembaMapundu/FIT3179-Visualisation/refs/heads/main/Data/Energy_production_data.csv"
@@ -9,18 +9,29 @@
   "transform": [
     {
       "fold": [
-        "BLACK COAL", "BROWN COAL", "NATURAL GAS", "OIL PRODUCTS", 
-        "BAGASSE, WOOD ", "BIOGAS", "WIND", "HYDRO", 
-        "LARGE SCALE SOLAR PV", "SMALL SCALE SOLAR PV", "GEOTHERMAL"
+        "BLACK COAL", "BROWN COAL", "NATURAL GAS", "OIL PRODUCTS",
+        "WIND", "HYDRO",
+        "LARGE SCALE SOLAR PV", "SMALL SCALE SOLAR PV"
       ],
       "as": ["Energy_Source", "Energy_Value"]
+    },
+    {
+      "calculate": "toNumber(datum.Energy_Value)",
+      "as": "Energy_Value"
+    },
+    {
+      "filter": "datum.Energy_Value != null && isFinite(datum.Energy_Value) && datum.Energy_Value > 0"
+    },
+    {
+      "calculate": "indexof(['BLACK COAL','BROWN COAL','NATURAL GAS','OIL PRODUCTS','WIND','HYDRO','LARGE SCALE SOLAR PV','SMALL SCALE SOLAR PV'], datum.Energy_Source) >= 0 ? datum.Energy_Source : 'Other'",
+      "as": "Grouped_Energy_Source"
     },
     {
       "calculate": "trim(datum.STATE)",
       "as": "TrimmedState"
     },
     {
-      "filter": {"field": "TrimmedState", "equal": {"expr": "state_select"}}
+      "filter": "datum.TrimmedState == state_select && datum.Grouped_Energy_Source != 'Other'"
     }
   ],
   "params": [
@@ -30,8 +41,8 @@
       "bind": {
         "input": "select",
         "options": [
-          "Overall", "New South Wales", "Victoria", "Queensland", "Western Australia",
-          "South Australia", "Tasmania", "Northern Territory"
+          "Overall", "New South Wales", "Victoria", "Queensland",
+          "Western Australia", "South Australia", "Tasmania", "Northern Territory"
         ],
         "name": "Select State: "
       }
@@ -39,72 +50,33 @@
   ],
   "mark": "bar",
   "encoding": {
-    "x": {
-      "field": "YEAR",
-      "type": "ordinal",
-      "title": "Year",
-      "axis": {"labelAngle": -45}
-    },
+    "x": {"field": "YEAR", "type": "ordinal", "title": "Year", "axis": {"labelAngle": -45}},
     "y": {
+      "aggregate": "sum",
       "field": "Energy_Value",
       "type": "quantitative",
       "title": "Energy Production (GWh)"
     },
     "color": {
-      "field": "Energy_Source",
+      "field": "Grouped_Energy_Source",
       "type": "nominal",
       "title": "Energy Source",
       "scale": {
-        "domain": [
-          "BLACK COAL", "BROWN COAL", "NATURAL GAS", "OIL PRODUCTS",
-          "BAGASSE, WOOD ", "BIOGAS", "WIND", "HYDRO",
-          "LARGE SCALE SOLAR PV", "SMALL SCALE SOLAR PV", "GEOTHERMAL"
-        ],
-        "range": [
-          "#1f77b4", "#aec7e8", "#ff7f0e", "#ffbb78",
-          "#2ca02c", "#98df8a", "#d62728", "#ff9896",
-          "#9467bd", "#c5b0d5", "#8c564b"
-        ]
+        "domain": ["BLACK COAL", "BROWN COAL", "NATURAL GAS", "HYDRO", "WIND"],
+        "range": ["purple", "orange", "red", "blue", "green"]
       }
     },
-    "order": {
-      "field": "Energy_Source",
-      "type": "ordinal",
-      "sort": [
-      "BLACK COAL",
-       "BROWN COAL",
-        "NATURAL GAS", 
-        "OIL PRODUCTS",
-      "BAGASSE, WOOD ", 
-      "BIOGAS", 
-      "WIND", 
-      "HYDRO",
-      "LARGE SCALE SOLAR PV", 
-      "SMALL SCALE SOLAR PV", 
-      "GEOTHERMAL"]
-      }
-    ,"tooltip": [
-      {"field": "YEAR",
-       "type": "ordinal",
-        "title": "Year"},
-      {"field": "STATE",
-       "type": "nominal", 
-       "title": "State"},
-      {"field": "Energy_Source",
-       "type": "nominal", 
-       "title": "Energy Source"},
+    "tooltip": [
+      {"field": "YEAR", "type": "ordinal"},
+      {"field": "TrimmedState", "type": "nominal", "title": "State"},
+      {"field": "Grouped_Energy_Source", "type": "nominal", "title": "Energy Source"},
       {
+        "aggregate": "sum",
         "field": "Energy_Value",
         "type": "quantitative",
-        "title": "Energy Production (GWh)",
+        "title": "GWh",
         "format": ".1f"
       }
     ]
-  },
-  "config": {
-    "legend": {
-      "columns": 1
-    }
   }
-
 }
