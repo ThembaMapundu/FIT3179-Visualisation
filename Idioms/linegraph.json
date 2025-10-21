@@ -5,7 +5,7 @@
   },
   "title": "Renewable vs. Non-Renewable Energy Consumption Over Time by State",
   "width": "container",
-  "height": 250,
+  "height": 400,
   "params": [
     {
       "name": "state_filter",
