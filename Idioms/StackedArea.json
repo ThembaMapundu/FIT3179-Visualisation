@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "width": "container",
-  "height": 250,
+  "width": 600,
+  "height": 400,
   "title": "Australian Renewable Electricity Generation by Fuel",
   "data": {
     "url": "https://raw.githubusercontent.com/ThembaMapundu/FIT3179-Visualisation/refs/heads/main/Data/renewable_energy_consumption.csv"
@@ -32,7 +32,10 @@
         "domain": ["Hydro", "Wind", "Solar", "Bioenergy"],
         "range": ["#1f77b4", "#2ca02c", "#ffdd33", "#8c564b"]
       },
-      "title": "Energy Source"
+      "title": "Energy Source",
+      "legend": {
+        "orient": "bottom"
+      }
     },
     "tooltip": [
       {"field": "Year Start", "type": "temporal", "title": "Year", "format": "%Y"},
