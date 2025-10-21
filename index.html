@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Australian Electrical Energy Production and Consumption</title>
+  <title>Australian Electrical Energy Production</title>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
@@ -71,11 +71,11 @@
         <!-- Title and subtitle -->
         <div class="pure-g">
             <div class="pure-u-1-1">
-                <h1>Australian Electrical Energy Production and Consumption</h1>
+                <h1>Australian Electrical Energy Production</h1>
                 <p>This visualisation charts the 16 year shift (2008 - 2023) in Australia's electrical energy, contrasting the steady path of 
                 usage with the transformation in production from non renewable energy sources to renewable energy sources. The data sourced from
                 Australian Energy Statistics, is recorded at the end of each financial year (July - June), providing a consistent timeline of the 
-                power sector's evolution.</p>
+                power sector's evolution. The energy values are measured in GWh which stands for giga-watt hours.</p>
             </div>
         </div>
         <!-- end pure grid group -->
@@ -91,6 +91,7 @@
         <!-- Comment -->
         <div class="pure-g">
             <div class="pure-u-1-1">
+                <p><small><i>This visualisation shows the overall energy produced in the 16 year period.</i></small></p>
                 <p>New South Wales and Queensland lead as the nation's powerhouses, each generating a total of over 1,000,000 GWh of energy during
                 the period 2008 - 2023. This is largely driven by their extensive coal fired power stations and significant population bases.
                 Victoria follows as a major contributor, while Western Australia's substantial output is closely tied to its energy intensive mining 
@@ -112,9 +113,11 @@
         <div class="pure-g">
             <div class="pure-u-1-1">
                 <p><small><i> Data is recorded at the end of every financial year </i></small></p>
-                <p>For each state there's a general decrease in production using non renewable energy sources such as coal and this is a result of a shift to
-                renewable energy such as hydro and wind energy. Since the energy produced from renewable is still overall low as compared to Non renewable energy 
-                sources, the renewable energy data has been grouped.</p>
+                <p><small><i> Energy sources that produce small values of electrical energy were disregarded </i></small></p>
+                <p>Brown and black coal have historically dominated electricity generation in New South Wales, Victoria, and Queensland, 
+                  but these states are now experiencing a noticeable decline in coal-based energy production. This shift toward renewable energy sources 
+                  has enabled consistent electricity output while supporting decarbonization efforts. In New South Wales, brown coal generation ended entirely 
+                  in 2016 with the closure of the Northern Power Station, marking a significant milestone in the state's energy transition.</p>
             </div>
         </div>
         <!-- end pure grid group -->
@@ -126,10 +129,9 @@
           </div>
           <div class="pure-u-1-2">
             <div class="description description-right">
-              <h2>Renewable Energy vs Non Renewable Energy</h2>
-              <p>During 2008-2023, Australia's energy landscape shifted significantly as renewable energy production surged across most states while non-renewable
-                generation gradually declined. This transition reflects the country's accelerating move toward cleaner energy sources, though fossil fuels still 
-                maintain a substantial presence in the energy mix.</p>
+              <h2>Renewable vs Non-Renewable</h2>
+              <p>Tasmania leads Australia in renewable energy, operating entirely on renewables since 2020 and producing the most clean power of any state in 2008-09. While Tasmania maintains 
+                minimal fossil fuel use, the most notable transition is occurring in mainland states like Victoria, which shows rapid growth in renewable energy adoption.</p>
             </div>
           </div>
         </div>
@@ -140,11 +142,9 @@
           <div class="pure-u-1-1">
             <div class="description description-right">
               <h2>The Shift to Renewable Energy</h2>
-              <p>Australia has undergone a remarkable energy transformation, with renewable energy production surging dramatically across all states and territories from 2008 to 2023.
-                 While non-renewable generation has gradually declined in most regions, renewable sources have experienced exponential growth, particularly in states like South Australia, 
-                Tasmania, and New South Wales. This shift reflects Australia's accelerating transition toward cleaner energy, driven by falling technology costs, supportive government 
-                policies, and growing climate consciousness. The data reveals a clear national trend of decarbonization, though the pace varies significantly between states, with some 
-                already achieving renewable dominance while others maintain substantial fossil fuel reliance.</p>
+              <p>Australia has undergone a significant energy transformation since 2008, with renewable generation surging dramatically while fossil fuel use gradually declines. 
+                This shift is most evident in states like South Australia, Tasmania and New South Wales, driven by falling technology costs and climate policies. While decarbonization 
+                progresses nationwide, the transition pace varies, with some states achieving renewable dominance while others maintain substantial fossil fuel reliance.</p>
             </div>
           </div>
           <div class="pure-u-1-1">
@@ -157,16 +157,13 @@
         <div class="pure-g">
           <div class="pure-u-1-2">
             <div class="description description-right">
-              <h2>The Shift to Renewable Energy</h2>
-              <p>Australia has undergone a remarkable energy transformation, with renewable energy production surging dramatically across all states and territories from 2008 to 2023.
-                 While non-renewable generation has gradually declined in most regions, renewable sources have experienced exponential growth, particularly in states like South Australia, 
-                Tasmania, and New South Wales. This shift reflects Australia's accelerating transition toward cleaner energy, driven by falling technology costs, supportive government 
-                policies, and growing climate consciousness. The data reveals a clear national trend of decarbonization, though the pace varies significantly between states, with some 
-                already achieving renewable dominance while others maintain substantial fossil fuel reliance.</p>
+              <h2>Rise in Clean Energy</h2>
+              <p>Bioenergy has been the leading producer of renewable energy from 2008 to 2023, with hydroelectricity as a close second, particularly dominant in Tasmania and New South Wales. 
+                This visualisation highlights the ongoing energy transition and projects a continued rise in renewable generation as Australia accelerates toward its clean energy targets.</p>
             </div>
           </div>
           <div class="pure-u-1-2">
-            <div id="vis3" class="vis-container"></div>
+            <div id="vis5" class="vis-container"></div>
           </div>
         </div>
         <!-- end pure grid group -->
@@ -187,6 +184,8 @@
         var specVis2 = "./Idioms/Stackedbar.json";
         var specVis3 = "./Idioms/renewmap.json";
         var specVis4 = "./Idioms/linegraph.json";
+        var specVis4 = "./Idioms/StackedArea.json";
+        
 
         vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -201,6 +200,10 @@
         }).catch(console.error);
 
         vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis5', specVis4, { "actions": false }).then(function (result) {
           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
     </script>
