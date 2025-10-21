@@ -48,7 +48,7 @@
     }
   ],
   "projection": {"type": "mercator"},
-  "mark": {"type": "geoshape", "stroke": 0.5},
+  "mark": {"type": "geoshape", "stroke": null},
   "encoding": {
     "shape": {"field": "geo", "type": "geojson"},
     "color": {
@@ -57,6 +57,9 @@
       "title": "Energy (GWh)",
       "scale": {
         "scheme": {"signal": "energyType == 'renewable' ? 'greens' : 'browns'"}
+      },
+      "legend": {
+        "orient": "left"
       }
     },
     "tooltip": [
